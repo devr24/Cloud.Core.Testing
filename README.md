@@ -24,9 +24,7 @@ It could be useful during tests to generate a list of text used in test cases.  
 
 ```csharp
 var loremWords = Cloud.Core.Testing.Lorem.Lorem.GetWords(10);
-
 var loremSentences = Cloud.Core.Testing.Lorem.Lorem.GetSentences(2);
-
 var loremParagraphs = Cloud.Core.Testing.Lorem.Lorem.GetParagraph(5);
 ```
 
