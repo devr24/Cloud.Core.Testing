@@ -13,8 +13,11 @@ Contains a set of Is* trait attributes that aggregate specific trait categories,
 - **IsUnit** - "Unit"
 - **IsIntegration** - "Integration"
 - **IsIntegrationReadOnly** - "Integration" + "ReadOnly"
+- **IsPerformance** - "Performance"
 
-This list can be added to when the build-release pipeline is defined.
+This list can be added to when the build-release pipeline is defined.  Use in the Build/Test step with this command:
+
+`dotnet test *ProjectName*.Test.csproj --filter "Category=Unit"`
 
 ### Lorem Ipsum helper
 It could be useful during tests to generate a list of text used in test cases.  The Lorem Ipsum helper has been defined to do this.  Generate words, sentences and paragraphs as follows:
