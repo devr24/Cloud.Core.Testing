@@ -76,7 +76,7 @@
         {
             var paragraphs = new List<string>();
 
-            for (int i = 1; i < paragraphCount; i++)
+            for (int i = 0; i < paragraphCount; i++)
                 paragraphs.Add(GetParagraph(paragraphCount + Rng.Next(3)));
 
             return paragraphs;

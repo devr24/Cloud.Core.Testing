@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FluentAssertions;
 using Xunit;
-using Xunit.Sdk;
 
 namespace Cloud.Core.Testing.Tests
 {
     public class LoremTest
     {
         [Fact, IsUnit]
+        [LogExecutionTime]
         public void Test_XUnitExtensions_FailPass()
         {
+            Console.WriteLine("TESTER");
             var sentences = Lorem.Lorem.GetSentences(5);
             var paragraphs = Lorem.Lorem.GetParagraphs(5);
 
@@ -25,6 +24,7 @@ namespace Cloud.Core.Testing.Tests
         }
 
         [Fact, IsUnit]
+        [LogExecutionTime]
         public void Test_Lorem_GetSingleWord()
         {
             var word = Lorem.Lorem.GetWord();
@@ -32,6 +32,7 @@ namespace Cloud.Core.Testing.Tests
         }
 
         [Fact, IsUnit]
+        [LogExecutionTime]
         public void Test_Lorem_GetSingleSentence()
         {
             var sentence = Lorem.Lorem.GetSentence();
@@ -41,6 +42,7 @@ namespace Cloud.Core.Testing.Tests
         }
 
         [Fact, IsUnit]
+        [LogExecutionTime]
         public void Test_Lorem_GetSingleParagraph()
         {
             var paragraph = Lorem.Lorem.GetParagraph(3);
@@ -49,6 +51,14 @@ namespace Cloud.Core.Testing.Tests
             split.RemoveAll(string.IsNullOrEmpty);
 
             Assert.Equal(3, split.Count);
+        }
+
+        [Fact, IsUnit]
+        [LogExecutionTime]
+        public void Test_Lorem_GetMultipleParagraphs()
+        {
+            var paragraph = Lorem.Lorem.GetParagraphs(5);
+            paragraph.Count().Should().Be(5);
         }
     }
 }

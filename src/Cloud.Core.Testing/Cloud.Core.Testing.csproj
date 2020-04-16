@@ -1,23 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Company>Robert McCabe</Company>
     <IsPackable>true</IsPackable>
     <PackageId>Cloud.Core.Testing</PackageId>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageTags>Cloud.Core.Testing Xunit Testing FluentAssertions</PackageTags>
     <PackageReleaseNotes />
-    <Description>Utility test package used in all other Cloud packages. Contains extensions to Xunit and test helper methods.</Description>
+    <Description>Utility test package used in Robert McCabe. Contains extensions to Xunit and helper methods.</Description>
     <Copyright>Robert McCabe</Copyright>
-    <Version>1.0</Version>
+    <Version>2.1</Version>
+    <PackageIconUrl>https://image.ibb.co/gG0xWp/AI.png</PackageIconUrl>
     <Authors>Robert McCabe</Authors>
+    <ProjectGuid>{234E5079-4489-43F7-BBE5-4DCF47256636}</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="5.5.3" />
-    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="FluentAssertions" Version="5.10.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="xunit" Version="2.4.1" />
   </ItemGroup>
 
