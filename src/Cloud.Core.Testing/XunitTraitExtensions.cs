@@ -76,7 +76,7 @@
     public abstract class CloudCoreCategoryAttribute : Attribute, ITraitAttribute
     {
         /// <summary>
-        /// Initializes a new instance of <see cref="AICategoryAttribute"/>.
+        /// Initializes a new instance of <see cref="CloudCoreCategoryAttribute"/>.
         /// </summary>
         /// <param name="categories">The trait categories present in the attribute.</param>
         protected CloudCoreCategoryAttribute(params string[] categories)
