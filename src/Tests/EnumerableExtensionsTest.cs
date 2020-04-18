@@ -4,9 +4,10 @@ using Xunit;
 
 namespace Cloud.Core.Testing.Tests
 {
+    [IsUnit]
     public class EnumerableExtensionsTest
     {
-        [Fact, IsUnit]
+        [Fact]
         public void Test_Enumerable_RandPick()
         {
             var testCollection = new List<string> { "one", "two", "three", "four", "five" };
@@ -15,7 +16,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.Equal(3, rand.Count());
         }
 
-        [Fact, IsUnit]
+        [Fact]
         public void Test_Enumerable_Join()
         {
             var testCollection = new List<string> { "one", "two", "three", "four", "five" };
@@ -24,7 +25,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.Equal("one two three four five", joined);
         }
 
-        [Fact, IsUnit]
+        [Fact]
         public void Test_Enumerable_Rand()
         {
             var testCollection = new List<string> { "one", "two", "three", "four", "five" };
@@ -33,7 +34,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.NotEmpty(testCollection.Where(i => i == rand));
         }
 
-        [Fact, IsUnit]
+        [Fact]
         public void Test_Enumerable_Shuffle()
         {
             var testCollection = new List<string> { "one", "two", "three", "four", "five" };

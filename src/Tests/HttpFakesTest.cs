@@ -11,11 +11,12 @@ using Xunit;
 
 namespace Cloud.Core.Testing.Tests
 {
+    [IsUnit]
     public class HttpFakesTest
     {
         private const string FAKEAPIURL = "http://www.test.com/";
 
-        [Fact, IsUnit]
+        [Fact]
         public void Test_HttpFakes_TestWithData()
         {
             var data = "test";
@@ -34,7 +35,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.Equal(content, data);
         }
 
-        [Fact, IsUnit]
+        [Fact]
         public void Test_HttpFakes_TestStatusOnly()
         {
             // Arrange - setup client and fake response.
@@ -49,7 +50,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
         }
 
-        [Fact, IsUnit]
+        [Fact]
         public void Test_HttpFakes_TestWithResponse()
         {
             // Arrange - setup client and fake response.
@@ -64,7 +65,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
 
-        [Fact, IsUnit]
+        [Fact]
         public void Test_HttpFakes_DoesNotExist()
         {
             // Arrange - setup client and fake response.

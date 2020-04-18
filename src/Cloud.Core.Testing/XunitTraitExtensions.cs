@@ -68,6 +68,18 @@
     }
 
     /// <summary>
+    /// Decorates a test as a smoke test entry point.
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
+    public sealed class IsSmokeAttribute : CloudCoreCategoryAttribute
+    {
+        /// <summary>
+        /// Initializes a new instance of <see cref="IsDevAttribute"/>
+        /// </summary>
+        public IsSmokeAttribute() : base("Smoke") { }
+    }
+
+    /// <summary>
     /// Base class for all the category model attributes. Contains a list of all the attribute categories
     /// and supports multiple categories.
     /// </summary>

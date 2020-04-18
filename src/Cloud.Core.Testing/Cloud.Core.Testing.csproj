@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Company>Robert McCabe</Company>
@@ -8,18 +7,16 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageTags>Cloud.Core.Testing Xunit Testing FluentAssertions</PackageTags>
     <PackageReleaseNotes />
-    <Description>Utility test package used in Robert McCabe. Contains extensions to Xunit and helper methods.</Description>
+    <Description>Utility test package used in all Cloud.Core projects. Contains extensions to Xunit and helper methods.</Description>
     <Copyright>Robert McCabe</Copyright>
     <Version>2.1</Version>
     <PackageIconUrl>https://image.ibb.co/gG0xWp/AI.png</PackageIconUrl>
     <Authors>Robert McCabe</Authors>
     <ProjectGuid>{234E5079-4489-43F7-BBE5-4DCF47256636}</ProjectGuid>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="xunit" Version="2.4.1" />
   </ItemGroup>
-
 </Project>

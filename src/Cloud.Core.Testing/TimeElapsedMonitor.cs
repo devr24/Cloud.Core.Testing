@@ -5,6 +5,9 @@
     using System.Reflection;
     using System.Diagnostics;
 
+    /// <summary>
+    /// Attribute for logging execution time to the Console and Debug output.
+    /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public class LogExecutionTime : BeforeAfterTestAttribute
     {

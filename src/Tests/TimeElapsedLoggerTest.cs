@@ -5,9 +5,11 @@ using Xunit;
 
 namespace Cloud.Core.Testing.Tests
 {
+    [IsUnit]
     public class TimeElapsedLoggerTest
     {
-        [Fact, IsUnit]
+        [Fact]
+        [LogExecutionTime] // example usage of attribute
         public void Test_TimeElapsedLoggerTest_StartStop()
         {
             // Arrange
@@ -28,7 +30,7 @@ namespace Cloud.Core.Testing.Tests
         }
 
 
-        [Fact, IsUnit]
+        [Fact]
         public void Test_TimeElapsedLoggerTest_Reset()
         {
             using (var logger = new TimeElapsedMonitor())

@@ -4,9 +4,10 @@ using Xunit;
 
 namespace Cloud.Core.Testing.Tests
 {
+    [IsUnit]
     public class IntegerExtensionsTest
     {
-        [Fact, IsUnit]
+        [Fact]
         public void Test_IntegerExtensions_ToPositive()
         {
             var intArr = 1.To(10).ToList();
@@ -15,7 +16,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.Equal(10, intArr[9]);
         }
 
-        [Fact, IsUnit]
+        [Fact]
         public void Test_IntegerExtensions_ToNegative()
         {
             var intArr = 10.To(1).ToList();

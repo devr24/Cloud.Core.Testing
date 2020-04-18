@@ -5,9 +5,10 @@ using Xunit;
 
 namespace Cloud.Core.Testing.Tests
 {
+    [IsUnit]
     public class LoremTest
     {
-        [Fact, IsUnit]
+        [Fact]
         [LogExecutionTime]
         public void Test_XUnitExtensions_FailPass()
         {
@@ -23,7 +24,7 @@ namespace Cloud.Core.Testing.Tests
             var words = Lorem.Lorem.GetWords(5);
         }
 
-        [Fact, IsUnit]
+        [Fact]
         [LogExecutionTime]
         public void Test_Lorem_GetSingleWord()
         {
@@ -31,7 +32,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.Single(word.Split(' '));
         }
 
-        [Fact, IsUnit]
+        [Fact]
         [LogExecutionTime]
         public void Test_Lorem_GetSingleSentence()
         {
@@ -41,7 +42,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.Single(split);
         }
 
-        [Fact, IsUnit]
+        [Fact]
         [LogExecutionTime]
         public void Test_Lorem_GetSingleParagraph()
         {
@@ -53,7 +54,7 @@ namespace Cloud.Core.Testing.Tests
             Assert.Equal(3, split.Count);
         }
 
-        [Fact, IsUnit]
+        [Fact]
         [LogExecutionTime]
         public void Test_Lorem_GetMultipleParagraphs()
         {
