@@ -1,8 +1,8 @@
 # **Cloud.Core.Testing** [![Cloud.Core.Testing package in Cloud.Core feed in Azure Artifacts](https://feeds.dev.azure.com/cloudcoreproject/dfc5e3d0-a562-46fe-8070-7901ac8e64a0/_apis/public/Packaging/Feeds/8949198b-5c74-42af-9d30-e8c462acada6/Packages/4a4d803b-f864-4da1-8060-6af8efb0e3e6/Badge)](https://dev.azure.com/cloudcoreproject/CloudCore/_packaging?_a=package&feed=8949198b-5c74-42af-9d30-e8c462acada6&package=4a4d803b-f864-4da1-8060-6af8efb0e3e6&preferRelease=true)
-[![Azure Artifacts package in feed in ](https://ailimited.feeds.visualstudio.com/_apis/public/Packaging/Feeds/a4cb22b7-84b8-4af5-8bc5-56003f50d046/Packages/fc9d14fb-fcae-46d5-94b6-449d9a1e68e5/Badge)](https://ailimited.visualstudio.com/_Packaging?feed=a4cb22b7-84b8-4af5-8bc5-56003f50d046&package=fc9d14fb-fcae-46d5-94b6-449d9a1e68e5&preferRelease=true&_a=package) 
-![Code Coverage](https://buildmonitoring.blob.core.windows.net/codecoveragebadges/Cloud.Core.Testing-LineCoverage.svg)
+[![Cloud.Core.Testing package in Cloud.Core feed in Azure Artifacts](https://feeds.dev.azure.com/cloudcoreproject/dfc5e3d0-a562-46fe-8070-7901ac8e64a0/_apis/public/Packaging/Feeds/8949198b-5c74-42af-9d30-e8c462acada6/Packages/4a4d803b-f864-4da1-8060-6af8efb0e3e6/Badge)](https://dev.azure.com/cloudcoreproject/CloudCore/_packaging?_a=package&feed=8949198b-5c74-42af-9d30-e8c462acada6&package=4a4d803b-f864-4da1-8060-6af8efb0e3e6&preferRelease=true) 
+![Code Coverage](https://cloud1core.blob.core.windows.net/codecoveragebadges/Cloud.Core.Testing-LineCoverage.png)
 
------------------
+
 
 <div id="description">
 
