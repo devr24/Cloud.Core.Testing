@@ -54,7 +54,7 @@ Windows (or Linux using Mono).
  
 ## Setup
 This package is built using .net Standard 2.1 and requires the .net Core 3.1 SDK, it can be downloaded here: 
-https://www.microsoft.com/net/download/dotnet-core/3.1
+https://www.microsoft.com/net/download/dotnet-core/
 
 IDE of Visual Studio or Visual Studio Code, can be downloaded here:
 https://visualstudio.microsoft.com/downloads/
