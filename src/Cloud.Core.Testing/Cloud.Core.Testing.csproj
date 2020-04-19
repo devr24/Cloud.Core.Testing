@@ -10,12 +10,14 @@
     <Description>Utility test package used in all Cloud.Core projects. Contains extensions to Xunit and helper methods.</Description>
     <Copyright>Robert McCabe</Copyright>
     <Version>2.1</Version>
-    <PackageIconUrl>https://image.ibb.co/gG0xWp/AI.png</PackageIconUrl>
+    <PackageIcon>https://cloud1core.blob.core.windows.net/icons/CC.png</PackageIcon>
     <Authors>Robert McCabe</Authors>
     <ProjectGuid>{234E5079-4489-43F7-BBE5-4DCF47256636}</ProjectGuid>
+    <RepositoryUrl>https://github.com/rmccabe24/Cloud.Core.Testing</RepositoryUrl>
+    <RepositoryType>Private</RepositoryType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="5.10.0" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="xunit" Version="2.4.1" />
   </ItemGroup>
