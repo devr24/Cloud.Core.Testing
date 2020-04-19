@@ -9,7 +9,7 @@
     <PackageReleaseNotes />
     <Description>Utility test package used in all Cloud.Core projects. Contains extensions to Xunit and helper methods.</Description>
     <Copyright>Robert McCabe</Copyright>
-    <Version>2.1</Version>
+    <Version>3.1</Version>
     <PackageIconUrl>https://cloud1core.blob.core.windows.net/icons/CC.png</PackageIconUrl>
     <Authors>Robert McCabe</Authors>
     <ProjectGuid>{234E5079-4489-43F7-BBE5-4DCF47256636}</ProjectGuid>
