@@ -8,7 +8,7 @@
     <PackageTags>Cloud.Core.Testing Xunit Testing FluentAssertions</PackageTags>
     <PackageReleaseNotes />
     <Description>Utility test package used in all Cloud.Core projects. Contains extensions to Xunit and helper methods.</Description>
-    <Copyright>Robert McCabe</Copyright>
+    <Copyright>Aylesbury Solutions Ltd</Copyright>
     <Version>3.1</Version>
     <PackageIconUrl>https://cloud1core.blob.core.windows.net/icons/CC.png</PackageIconUrl>
     <Authors>Robert McCabe</Authors>
