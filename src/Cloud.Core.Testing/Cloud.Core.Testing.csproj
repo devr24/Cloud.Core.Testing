@@ -15,9 +15,6 @@
     <ProjectGuid>{234E5079-4489-43F7-BBE5-4DCF47256636}</ProjectGuid>
     <RepositoryUrl>https://github.com/rmccabe24/Cloud.Core.Testing</RepositoryUrl>
     <RepositoryType>Private</RepositoryType>
-  </PropertyGroup>
-  
-  <PropertyGroup>
     <DocumentationFile>Cloud.Core.Testing.xml</DocumentationFile>
   </PropertyGroup>
 
