@@ -82,7 +82,10 @@
             return paragraphs;
         }
 
-        private static readonly string[] Words =
+        /// <summary>
+        /// The list of Lorem ipsum words.
+        /// </summary>
+        public static readonly string[] Words =
         {
             "alias", "consequatur", "aut", "perferendis", "sit", "voluptatem", "accusantium",
             "doloremque", "aperiam", "eaque", "ipsa", "quae", "ab", "illo", "inventore", "veritatis",

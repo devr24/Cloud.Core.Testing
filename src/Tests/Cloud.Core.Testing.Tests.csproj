@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <IsPackable>false</IsPackable>
-    <Authors>Robert McCabe</Authors>
-    <Company>Robert McCabe</Company>
     <Description>Unit tests for Cloud.Core.Testing package.</Description>
-    <Copyright>Robert McCabe</Copyright>
+    <Authors>Robert McCabe</Authors>
+    <Company>Aylesbury Solutions Ltd</Company>
+    <Copyright>Aylesbury Solutions Ltd</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

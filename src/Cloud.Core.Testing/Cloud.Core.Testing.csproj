@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Company>Robert McCabe</Company>
     <IsPackable>true</IsPackable>
     <PackageId>Cloud.Core.Testing</PackageId>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageTags>Cloud.Core.Testing Xunit Testing FluentAssertions</PackageTags>
     <PackageReleaseNotes />
     <Description>Utility test package used in all Cloud.Core projects. Contains extensions to Xunit and helper methods.</Description>
+    <Authors>Robert McCabe</Authors>
+    <Company>Aylesbury Solutions Ltd</Company>
     <Copyright>Aylesbury Solutions Ltd</Copyright>
     <Version>3.1</Version>
     <PackageIconUrl>https://cloud1core.blob.core.windows.net/icons/CC.png</PackageIconUrl>
-    <Authors>Robert McCabe</Authors>
     <ProjectGuid>{234E5079-4489-43F7-BBE5-4DCF47256636}</ProjectGuid>
     <RepositoryUrl>https://github.com/rmccabe24/Cloud.Core.Testing</RepositoryUrl>
     <RepositoryType>Private</RepositoryType>

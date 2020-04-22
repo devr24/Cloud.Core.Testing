@@ -8,6 +8,7 @@ namespace Cloud.Core.Testing.Tests
     [IsUnit]
     public class TimeElapsedLoggerTest
     {
+        /// <summary>Checking the start and stop of the monitor records records the elapsed time.</summary>
         [Fact]
         [LogExecutionTime] // example usage of attribute
         public void Test_TimeElapsedLoggerTest_StartStop()
@@ -29,7 +30,7 @@ namespace Cloud.Core.Testing.Tests
             logger.Elapsed.Should().BeGreaterThan(TimeSpan.MinValue);
         }
 
-
+        /// <summary>Checking reset does actually reset the elapsed time.</summary>
         [Fact]
         public void Test_TimeElapsedLoggerTest_Reset()
         {
