@@ -16,6 +16,11 @@
     <RepositoryUrl>https://github.com/rmccabe24/Cloud.Core.Testing</RepositoryUrl>
     <RepositoryType>Private</RepositoryType>
   </PropertyGroup>
+  
+  <PropertyGroup>
+    <DocumentationFile>Cloud.Core.Testing.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
