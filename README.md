@@ -22,9 +22,9 @@ This list can be added to when the build-release pipeline is defined.
 It could be useful during tests to generate a list of text used in test cases.  The Lorem Ipsum helper has been defined to do this.  Generate words, sentences and paragraphs as follows:
 
 ```csharp
-var loremWords = Cloud.Core.Testing.Lorem.Lorem.GetWords(10);
-var loremSentences = Cloud.Core.Testing.Lorem.Lorem.GetSentences(2);
-var loremParagraphs = Cloud.Core.Testing.Lorem.Lorem.GetParagraph(5);
+var loremWords = Cloud.Core.Testing.Lorem.Lorem.GetWords(10); // number of words
+var loremSentences = Cloud.Core.Testing.Lorem.Lorem.GetSentences(2);  // number of sentences
+var loremParagraphs = Cloud.Core.Testing.Lorem.Lorem.GetParagraphs(5);  // number of paragraphs
 ```
 
 ### LogExecutionTime Attribute
@@ -35,13 +35,36 @@ The LogExecutionTime attribute can be used to output the time it takes a test to
 [LogExecutionTime]
 public void Test_Lorem_GetSingleParagraph()
 {
-	var paragraph = Lorem.Lorem.GetParagraph(3);
+     var paragraph = Lorem.Lorem.GetParagraph(3);
 
-	var split = paragraph.Split('.').ToList();
-	split.RemoveAll(string.IsNullOrEmpty);
+     var split = paragraph.Split('.').ToList();
+     split.RemoveAll(string.IsNullOrEmpty);
 
-	Assert.Equal(3, split.Count);
+     Assert.Equal(3, split.Count);
 }
+```
+
+### Fake Http Client
+The fake Http Client can be used as an alternative to mocking http calls.  You can setup responses to particular endpoints as follows:
+
+```csharp
+// Setup fake response data.
+var responseData = "test"; // this can be any object.
+
+// Endpoint that is expected to be called, along with status of response and a payload.
+var fakeHttpClient = new FakeHttpClient(FAKEAPIURL);
+fakeHttpClient.AddEndPoint("api/values", HttpStatusCode.OK, responseData);
+
+// Get the fake http client instance.
+var client = fakeHttpClient.GetHttpClient();
+
+// Make request and get our predicted response.
+var response = client.GetAsync("api/values").GetAwaiter().GetResult();
+var content = JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().GetAwaiter().GetResult());
+
+// Assert - response was as expected.
+Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+Assert.Equal(content, responseData);
 ```
 
 ## Test Coverage
