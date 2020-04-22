@@ -13,12 +13,14 @@
     {
         private readonly TimeElapsedMonitor _monitor = new TimeElapsedMonitor(false);
 
+        /// <inheritdoc />
         public override void Before(MethodInfo methodUnderTest)
         {
             _monitor.Start();
             WriteLog($"{methodUnderTest.Name}: Started: {_monitor.StartTime?.ToString("hh:mm:ss.fff")}");
         }
-        
+
+        /// <inheritdoc />
         public override void After(MethodInfo methodUnderTest)
         {
             _monitor.Stop();

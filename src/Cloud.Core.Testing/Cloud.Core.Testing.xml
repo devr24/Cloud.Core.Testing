@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cloud.Core.Testing</name>
+    </assembly>
+    <members>
+        <member name="T:System.Collections.Generic.EnumerableExtensions">
+            <summary>
+            Extension methods for enumerable.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.EnumerableExtensions.Join``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Joins the list of items using a separator.
+            </summary>
+            <typeparam name="T">Generic type for items.</typeparam>
+            <param name="items">The items to join.</param>
+            <param name="separator">The separator used when joining.</param>
+            <returns>String representation of items joined using separator.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.EnumerableExtensions.Rand``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Random item from list of items.
+            </summary>
+            <typeparam name="T">Generic type of items.</typeparam>
+            <param name="items">The list to get a single item from.</param>
+            <returns>Randomly selected item of type T.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.EnumerableExtensions.RandPick``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            List of random items from a passed in generic list.
+            </summary>
+            <typeparam name="T">Generic type of enumerable items.</typeparam>
+            <param name="items">The items to select from.</param>
+            <param name="itemsToTake">The number of items to take.</param>
+            <returns>Randomly selected list of items.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.EnumerableExtensions.Shuffle``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Shuffles the specified array.
+            From here:
+            http://stackoverflow.com/questions/375351/most-efficient-way-to-randomly-sort-shuffle-a-list-of-integers-in-c
+            </summary>
+            <typeparam name="T">Generic type of enumerable items.</typeparam>
+            <param name="array">The list of items to shuffle.</param>
+            <returns>List of shuffled items.</returns>
+        </member>
+        <member name="T:System.IntegerExtensions">
+            <summary>
+            Extension methods for integers
+            </summary>
+        </member>
+        <member name="M:System.IntegerExtensions.To(System.Int32,System.Int32)">
+            <summary>
+            List of integers within the "to" and "from" range.
+            </summary>
+            <param name="from"><see cref="T:System.Int32"/> range from.</param>
+            <param name="to"><see cref="T:System.Int32"/> range to.</param>
+            <returns>Enumerable list of integers within the from and to range.</returns>
+        </member>
+        <member name="T:Cloud.Core.Testing.Fakes.FakeHttpClient">
+            <summary>
+            Class used for faking HttpClient calls.
+            </summary>
+        </member>
+        <member name="P:Cloud.Core.Testing.Fakes.FakeHttpClient.FakeResponseHandler">
+            <summary>
+            Gets the fake response handler.
+            </summary>
+            <value>The fake response handler.</value>
+        </member>
+        <member name="P:Cloud.Core.Testing.Fakes.FakeHttpClient.BaseUrl">
+            <summary>
+            Gets the base URL set during instantiation.
+            </summary>
+            <value>The base URL.</value>
+        </member>
+        <member name="M:Cloud.Core.Testing.Fakes.FakeHttpClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cloud.Core.Testing.Fakes.FakeHttpClient" /> class.
+            </summary>
+            <param name="baseUrl">The base URL.</param>
+        </member>
+        <member name="M:Cloud.Core.Testing.Fakes.FakeHttpClient.AddEndPoint``1(System.String,System.Net.HttpStatusCode,``0)">
+            <summary>
+            Adds an end point to the fake response handler.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="endPoint">The end point address to add, such as 'api/v1/values'.</param>
+            <param name="responseCode">The response code when the end point is requested.</param>
+            <param name="responseData">The response data when the end point is requested.</param>
+        </member>
+        <member name="M:Cloud.Core.Testing.Fakes.FakeHttpClient.AddEndPoint(System.String,System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Adds the end point.
+            </summary>
+            <param name="endPoint">The end point.</param>
+            <param name="response">The response.</param>
+        </member>
+        <member name="M:Cloud.Core.Testing.Fakes.FakeHttpClient.AddEndPoint(System.String,System.Net.HttpStatusCode)">
+            <summary>
+            Adds the end point.
+            </summary>
+            <param name="endPoint">The end point.</param>
+            <param name="responseCode">The response code.</param>
+        </member>
+        <member name="M:Cloud.Core.Testing.Fakes.FakeHttpClient.GetHttpClient">
+            <summary>
+            Gets an instance of HTTP client which uses the predefined fake responses.
+            </summary>
+            <returns>HttpClient.</returns>
+        </member>
+        <member name="T:Cloud.Core.Testing.Fakes.FakeResponseHandler">
+            <summary>
+            Class for faking Http responses.
+            Implements the <see cref="T:System.Net.Http.DelegatingHandler" />
+            </summary>
+            <seealso cref="T:System.Net.Http.DelegatingHandler" />
+        </member>
+        <member name="M:Cloud.Core.Testing.Fakes.FakeResponseHandler.AddFakeResponse(System.Uri,System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Adds a fake response for a uri, with associated response message.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="responseMessage">The response message for the request.</param>
+        </member>
+        <member name="M:Cloud.Core.Testing.Fakes.FakeResponseHandler.AddFakeResponse``1(System.Uri,System.Net.HttpStatusCode,``0)">
+            <summary>
+            Adds the fake response for the uri with a specific response code and data.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="uri">The URI.</param>
+            <param name="responseCode">The response code.</param>
+            <param name="responseData">The response data.</param>
+        </member>
+        <member name="M:Cloud.Core.Testing.Fakes.FakeResponseHandler.AddFakeResponse(System.Uri,System.Net.HttpStatusCode)">
+            <summary>
+            Adds the fake response for the url with a specific response code.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="responseCode">The response code.</param>
+        </member>
+        <member name="M:Cloud.Core.Testing.Fakes.FakeResponseHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            Sends an HTTP request to the inner handler to send to the server as an asynchronous operation.
+            </summary>
+            <param name="request">The HTTP request message to send to the server.</param>
+            <param name="cancellationToken">A cancellation token to cancel operation.</param>
+            <returns>The task object representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:Cloud.Core.Testing.Lorem.Lorem">
+            <summary>
+            Lorem ipsum class to produce Lorem Ipsum strings for testing.
+            Originally taken from: https://github.com/jonwingfield/Faker.Net
+            Added a few cosmetic tweaks to reduce the code.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.Lorem.Lorem.GetWord">
+            <summary>
+            Gets a single word.
+            </summary>
+            <returns>A single word.</returns>
+        </member>
+        <member name="M:Cloud.Core.Testing.Lorem.Lorem.GetWords(System.Int32)">
+            <summary>
+            Gets several words.
+            </summary>
+            <param name="num">The number of words to get, defaults with 3.</param>
+            <returns>Several words.</returns>
+        </member>
+        <member name="M:Cloud.Core.Testing.Lorem.Lorem.GetSentence(System.Int32)">
+            <summary>
+            Gets a single sentence.
+            </summary>
+            <param name="wordCount">The number of words on the sentence, defaults with 4.</param>
+            <returns>A single sentence.</returns>
+        </member>
+        <member name="M:Cloud.Core.Testing.Lorem.Lorem.GetSentences(System.Int32)">
+            <summary>
+            Gets several sentences
+            </summary>
+            <param name="sentenceCount">The number of sentences to get, defaults with 3.</param>
+            <returns>Several sentences.</returns>
+        </member>
+        <member name="M:Cloud.Core.Testing.Lorem.Lorem.GetParagraph(System.Int32)">
+            <summary>
+            Gets a single paragraph.
+            </summary>
+            <param name="sentenceCount">The sentences in the paragraph, defaults with 3.</param>
+            <returns>A single paragraph.</returns>
+        </member>
+        <member name="M:Cloud.Core.Testing.Lorem.Lorem.GetParagraphs(System.Int32)">
+            <summary>
+            Gets several paragraphs.
+            </summary>
+            <param name="paragraphCount">The number of paragraphs to get, defaults with 3.</param>
+            <returns>Several paragraphs.</returns>
+        </member>
+        <member name="F:Cloud.Core.Testing.Lorem.Lorem.Words">
+            <summary>
+            The list of Lorem ipsum words.
+            </summary>
+        </member>
+        <member name="T:Cloud.Core.Testing.LogExecutionTime">
+            <summary>
+            Attribute for logging execution time to the Console and Debug output.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.LogExecutionTime.Before(System.Reflection.MethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cloud.Core.Testing.LogExecutionTime.After(System.Reflection.MethodInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cloud.Core.Testing.LogExecutionTime.WriteLog(System.String)">
+            <summary>
+            Writes the log message to console and debug loggers.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="T:Cloud.Core.Testing.TimeElapsedMonitor">
+            <summary>
+            Simple class to measure time elapsed.  Can be used with a using statement without any extra code (auto starts and stops).
+            Implements the <see cref="T:System.IDisposable" />
+            </summary>
+            <seealso cref="T:System.IDisposable" />
+        </member>
+        <member name="P:Cloud.Core.Testing.TimeElapsedMonitor.StartTime">
+            <summary>
+            Gets the start time.
+            </summary>
+            <value>The start time.</value>
+        </member>
+        <member name="P:Cloud.Core.Testing.TimeElapsedMonitor.StopTime">
+            <summary>
+            Gets the stop time.
+            </summary>
+            <value>The stop time.</value>
+        </member>
+        <member name="P:Cloud.Core.Testing.TimeElapsedMonitor.Elapsed">
+            <summary>
+            Gets the amount of elapsed time as a Timespan.
+            </summary>
+            <value>The elapsed timespan.</value>
+        </member>
+        <member name="P:Cloud.Core.Testing.TimeElapsedMonitor.ElapsedString">
+            <summary>
+            Gets the elapsed time as a string.
+            </summary>
+            <value>The elapsed time string.</value>
+        </member>
+        <member name="P:Cloud.Core.Testing.TimeElapsedMonitor.IsRunning">
+            <summary>
+            Gets whether the elapsed time is being measured [true] or not [false].
+            </summary>
+            <value>Is currently running.</value>
+        </member>
+        <member name="M:Cloud.Core.Testing.TimeElapsedMonitor.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cloud.Core.Testing.TimeElapsedMonitor"/> class.
+            </summary>
+            <param name="autoStart">if set to <c>true</c> [autoStart].</param>
+        </member>
+        <member name="M:Cloud.Core.Testing.TimeElapsedMonitor.Start">
+            <summary>
+            Starts measuring time elapsed.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.TimeElapsedMonitor.Stop">
+            <summary>
+            Stops measuring time elapsed.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.TimeElapsedMonitor.Reset">
+            <summary>
+            Resets the time elapsed.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.TimeElapsedMonitor.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            Stops the elapsed time stopwatch.
+            </summary>
+        </member>
+        <member name="T:Cloud.Core.Testing.AssertExtensions">
+            <summary>
+            Assert extension methods.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.AssertExtensions.Fail">
+            <summary>
+            Fails by throwing an Xunit exception.
+            </summary>
+            <exception cref="T:Xunit.Sdk.XunitException"></exception>
+        </member>
+        <member name="M:Cloud.Core.Testing.AssertExtensions.DoesNotThrow(System.Action)">
+            <summary>
+            Assert that the action does not throw an exception.
+            </summary>
+            <param name="performTest">The perform test.</param>
+        </member>
+        <member name="T:Cloud.Core.Testing.IsUnitAttribute">
+            <summary>
+            Decorates a test as a Unit Test, so that it runs in Continuous Integration builds.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.IsUnitAttribute.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Cloud.Core.Testing.IsUnitAttribute"/>
+            </summary>
+        </member>
+        <member name="T:Cloud.Core.Testing.IsIntegrationAttribute">
+            <summary>
+            Decorates a test as an Integration Test, so that it runs in Continuous Integration builds.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.IsIntegrationAttribute.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Cloud.Core.Testing.IsIntegrationAttribute"/>
+            </summary>
+        </member>
+        <member name="T:Cloud.Core.Testing.IsIntegrationReadOnlyAttribute">
+            <summary>
+            Decorates a test as a Read Only Integration Test, so that it runs in Continuous Integration builds and can also run in Production.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.IsIntegrationReadOnlyAttribute.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Cloud.Core.Testing.IsIntegrationReadOnlyAttribute"/>
+            </summary>
+        </member>
+        <member name="T:Cloud.Core.Testing.IsPerformanceAttribute">
+            <summary>
+            Decorates a test as a Read Only Integration Test, so that it runs in Continuous Integration builds and can also run in Production.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.IsPerformanceAttribute.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Cloud.Core.Testing.IsIntegrationReadOnlyAttribute"/>
+            </summary>
+        </member>
+        <member name="T:Cloud.Core.Testing.IsDevAttribute">
+            <summary>
+            Decorates a test as a development entry point.
+            This test never runs on any automated build, is purely a development facility.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.IsDevAttribute.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Cloud.Core.Testing.IsDevAttribute"/>
+            </summary>
+        </member>
+        <member name="T:Cloud.Core.Testing.IsSmokeAttribute">
+            <summary>
+            Decorates a test as a smoke test entry point.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.IsSmokeAttribute.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Cloud.Core.Testing.IsDevAttribute"/>
+            </summary>
+        </member>
+        <member name="T:Cloud.Core.Testing.CloudCoreCategoryAttribute">
+            <summary>
+            Base class for all the category model attributes. Contains a list of all the attribute categories
+            and supports multiple categories.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.CloudCoreCategoryAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of <see cref="T:Cloud.Core.Testing.CloudCoreCategoryAttribute"/>.
+            </summary>
+            <param name="categories">The trait categories present in the attribute.</param>
+        </member>
+        <member name="P:Cloud.Core.Testing.CloudCoreCategoryAttribute.Categories">
+            <summary>
+            Gets the list of categories in the test that the attribute is decorating.
+            Exposed as public because xUnit needs to reflect the getter to get to it.
+            </summary>
+        </member>
+        <member name="T:Cloud.Core.Testing.CloudCoreCategoryDiscoverer">
+            <summary>
+            Discoverer that provides Cloud core trait values to xUnit tests.
+            </summary>
+        </member>
+        <member name="M:Cloud.Core.Testing.CloudCoreCategoryDiscoverer.GetTraits(Xunit.Abstractions.IAttributeInfo)">
+            <summary>Gets the trait values from the trait attribute.</summary>
+            <param name="traitAttribute">The trait attribute containing the trait values.</param>
+            <returns>The trait values.</returns>
+        </member>
+    </members>
+</doc>
