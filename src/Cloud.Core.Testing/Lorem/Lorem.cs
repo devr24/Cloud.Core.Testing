@@ -52,7 +52,9 @@
             var sentences = new List<string>();
 
             for (int i = 0; i < sentenceCount; i++)
+            {
                 sentences.Add(GetSentence());
+            }
 
             return sentences;
         }
@@ -77,7 +79,9 @@
             var paragraphs = new List<string>();
 
             for (int i = 0; i < paragraphCount; i++)
+            {
                 paragraphs.Add(GetParagraph(paragraphCount + Rng.Next(3)));
+            }
 
             return paragraphs;
         }

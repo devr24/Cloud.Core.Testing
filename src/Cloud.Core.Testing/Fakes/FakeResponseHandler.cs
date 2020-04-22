@@ -60,9 +60,11 @@
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, System.Threading.CancellationToken cancellationToken)
         {
             if (_fakeResponses.ContainsKey(request.RequestUri))
+            {
                 return Task.FromResult(_fakeResponses[request.RequestUri]);
-            else
-                return Task.FromResult(new HttpResponseMessage(HttpStatusCode.NotFound) { RequestMessage = request });
+            }
+
+            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.NotFound) {RequestMessage = request});
         }
     }
 }

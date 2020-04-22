@@ -46,7 +46,9 @@
             var list = items as IList<T> ?? items.ToList();
 
             for (var i = 0; i < itemsToTake; i++)
+            {
                 yield return list[Rng.Next(list.Count)];
+            }
         }
 
         /// <summary>

@@ -11,7 +11,7 @@
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public class LogExecutionTime : BeforeAfterTestAttribute
     {
-        private TimeElapsedMonitor _monitor = new TimeElapsedMonitor(false);
+        private readonly TimeElapsedMonitor _monitor = new TimeElapsedMonitor(false);
 
         public override void Before(MethodInfo methodUnderTest)
         {
@@ -43,7 +43,7 @@
     /// <seealso cref="System.IDisposable" />
     public class TimeElapsedMonitor : IDisposable
     {
-        private Stopwatch _stopwatch = new Stopwatch();
+        private readonly Stopwatch _stopwatch = new Stopwatch();
 
         /// <summary>
         /// Gets the start time.
@@ -67,7 +67,7 @@
         /// Gets the elapsed time as a string.
         /// </summary>
         /// <value>The elapsed time string.</value>
-        public string ElapsedString => string.Format("Time elapsed: {0:hh\\:mm\\:ss\\.fff}", Elapsed);
+        public string ElapsedString => $"Time elapsed: {Elapsed:hh\\:mm\\:ss\\.fff}";
 
         /// <summary>
         /// Gets whether the elapsed time is being measured [true] or not [false].
@@ -78,11 +78,13 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeElapsedMonitor"/> class.
         /// </summary>
-        /// <param name="autostart">if set to <c>true</c> [autostart].</param>
-        public TimeElapsedMonitor(bool autostart = true)
+        /// <param name="autoStart">if set to <c>true</c> [autoStart].</param>
+        public TimeElapsedMonitor(bool autoStart = true)
         {
-            if (autostart)
+            if (autoStart)
+            {
                 Start();
+            }
         }
 
         /// <summary>
