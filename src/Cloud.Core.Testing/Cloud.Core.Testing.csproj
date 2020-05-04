@@ -4,8 +4,9 @@
     <IsPackable>true</IsPackable>
     <PackageId>Cloud.Core.Testing</PackageId>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <PackageTags>Cloud.Core.Testing Xunit Testing FluentAssertions</PackageTags>
-    <PackageReleaseNotes />
+    <PackageTags>Cloud.Core.Testing Xunit Testing FluentAssertions Cloud.Core</PackageTags>
+    <PackageReleaseNotes>Full API Documentation can be found here:
+https://cloud1core.blob.core.windows.net/docs/Cloud.Core.Testing/index.html</PackageReleaseNotes>
     <Description>Utility test package used in all Cloud.Core projects. Contains extensions to Xunit and helper methods.</Description>
     <Authors>Robert McCabe</Authors>
     <Company>Aylesbury Solutions Ltd</Company>
@@ -14,9 +15,11 @@
 	<PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageIconUrl>https://cloud1core.blob.core.windows.net/icons/CC.png</PackageIconUrl>
     <ProjectGuid>{234E5079-4489-43F7-BBE5-4DCF47256636}</ProjectGuid>
-    <RepositoryUrl>https://github.com/rmccabe24/Cloud.Core.Testing</RepositoryUrl>
+	  <RepositoryUrl>https://github.com/rmccabe24/Cloud.Core.Testing</RepositoryUrl>
     <RepositoryType>Private</RepositoryType>
     <DocumentationFile>Cloud.Core.Testing.xml</DocumentationFile>
+    <PackageProjectUrl>https://dev.azure.com/cloudcoreproject/CloudCore/</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
