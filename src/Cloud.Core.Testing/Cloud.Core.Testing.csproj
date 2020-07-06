@@ -12,7 +12,6 @@ https://cloud1core.blob.core.windows.net/docs/Cloud.Core.Testing/index.html</Pac
     <Company>Aylesbury Solutions Ltd</Company>
     <Copyright>Aylesbury Solutions Ltd</Copyright>
     <Version>3.1</Version>
-	<PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageIconUrl>https://cloud1core.blob.core.windows.net/icons/CC.png</PackageIconUrl>
     <ProjectGuid>{234E5079-4489-43F7-BBE5-4DCF47256636}</ProjectGuid>
 	  <RepositoryUrl>https://github.com/rmccabe24/Cloud.Core.Testing</RepositoryUrl>
@@ -20,6 +19,7 @@ https://cloud1core.blob.core.windows.net/docs/Cloud.Core.Testing/index.html</Pac
     <DocumentationFile>Cloud.Core.Testing.xml</DocumentationFile>
     <PackageProjectUrl>https://dev.azure.com/cloudcoreproject/CloudCore/</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
