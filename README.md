@@ -5,6 +5,8 @@
 
 <div id="description">
 Testing utility package used in all Cloud.Core projects.  All reusable test helpers should live in this package to be reused through testing projects.
+     
+**[Read full Api documentation](https://cloud1core.blob.core.windows.net/docs/Cloud.Core.Testing/api/index.html)**
 </div>
 
 ## Usage
