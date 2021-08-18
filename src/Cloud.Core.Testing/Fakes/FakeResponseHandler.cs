@@ -5,7 +5,6 @@
     using System.Net;
     using System.Net.Http;
     using System.Threading.Tasks;
-    using Newtonsoft.Json;
 
     /// <summary>
     /// Class for faking Http responses.
@@ -36,7 +35,7 @@
         public void AddFakeResponse<T>(Uri uri, HttpStatusCode responseCode, T responseData)
         {
             var response = new HttpResponseMessage(responseCode);
-            var json =  JsonConvert.SerializeObject(responseData);
+            var json =  System.Text.Json.JsonSerializer.Serialize(responseData);
             response.Content = new StringContent(json);
             _fakeResponses.Add(uri, response);
         }
