@@ -19,7 +19,7 @@ https://cloud1core.blob.core.windows.net/docs/Cloud.Core.Testing/index.html</Pac
     <DocumentationFile>Cloud.Core.Testing.xml</DocumentationFile>
     <PackageProjectUrl>https://dev.azure.com/cloudcoreproject/CloudCore/</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageLicenseExpression>Dual</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
