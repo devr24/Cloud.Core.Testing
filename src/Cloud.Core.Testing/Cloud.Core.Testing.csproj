@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <IsPackable>true</IsPackable>
     <PackageId>Cloud.Core.Testing</PackageId>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
@@ -11,7 +11,7 @@ https://cloud1core.blob.core.windows.net/docs/Cloud.Core.Testing/index.html</Pac
     <Authors>Robert McCabe</Authors>
     <Company>Aylesbury Solutions Ltd</Company>
     <Copyright>Aylesbury Solutions Ltd</Copyright>
-    <Version>5.0</Version>
+    <Version>8.0</Version>
     <PackageIconUrl>https://cloud1core.blob.core.windows.net/icons/CC.png</PackageIconUrl>
     <ProjectGuid>{234E5079-4489-43F7-BBE5-4DCF47256636}</ProjectGuid>
 	  <RepositoryUrl>https://github.com/rmccabe24/Cloud.Core.Testing</RepositoryUrl>
@@ -23,7 +23,7 @@ https://cloud1core.blob.core.windows.net/docs/Cloud.Core.Testing/index.html</Pac
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="6.0.0" />
-    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="xunit" Version="2.7.0" />
   </ItemGroup>
 </Project>

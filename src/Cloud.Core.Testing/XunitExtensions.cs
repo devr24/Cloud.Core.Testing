@@ -12,9 +12,9 @@
         /// Fails by throwing an Xunit exception.
         /// </summary>
         /// <exception cref="Xunit.Sdk.XunitException"></exception>
-        public static void Fail()
+        public static void Fail(string message = null)
         {
-            throw new Xunit.Sdk.XunitException();
+            throw new Xunit.Sdk.XunitException(message);
         }
 
         /// <summary>
